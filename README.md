@@ -2,7 +2,7 @@
 Project ini adalah sebuah mini project yang berfungsi untuk mengelola data survey di Kabupaten.
 
 # Spesifikasi</BR>
-Teknologi: ASP.NET MVC, .NET Core 5.0, IIS Server</BR>
+Teknologi: ASP.NET MVC, .NET Core 5.0, IIS Express </BR>
 Database: SQL Server 2019
 
 
