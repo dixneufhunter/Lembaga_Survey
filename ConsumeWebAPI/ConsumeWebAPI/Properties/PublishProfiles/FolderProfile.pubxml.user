@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\MINI_PROJECT\Microservice\ConsumeWebAPI\ConsumeWebAPI\bin\Release\net5.0\publish\</_PublishTargetUrl>
+    <History>True|2024-09-20T08:19:39.8775635Z;True|2024-09-20T14:44:03.5901974+07:00;True|2024-09-20T14:42:09.5242485+07:00;True|2024-09-20T14:08:01.5363790+07:00;True|2024-09-20T13:43:20.7069402+07:00;True|2024-09-20T13:29:03.5100019+07:00;True|2024-09-20T13:21:23.0186325+07:00;True|2024-09-20T12:50:12.2856681+07:00;</History>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<ConsumeWebAPI.Models.Lembaga_SurveyViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    //var _NmKab = TempData["Nm_Kab"].ToString();
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID_LEMBAGA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NAMA_LEMBAGA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ALAMAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NO_TELEPON)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KETERANGAN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.THN_PENELITIAN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FLAG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TGL_SURVEY)
+            </th>
+            <th hidden="hidden">
+                @Html.DisplayNameFor(model => model.KODE_KABUPATEN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NAMA_KABUPATEN)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+       
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_LEMBAGA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NAMA_LEMBAGA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ALAMAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NO_TELEPON)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KETERANGAN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.THN_PENELITIAN)
+            </td>
+            <td>
+                @*@Html.DisplayFor(modelItem => item.FLAG)*@
+                @if (item.FLAG == "Y")
+                {
+                    <label>Aktif</label>
+                }
+                else
+                {
+                    <label>Tidak Aktif</label>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TGL_SURVEY)
+            </td>
+            <td hidden="hidden">
+                @Html.DisplayFor(modelItem => item.KODE_KABUPATEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NAMA_KABUPATEN)
+                @*@_NmKab*@
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID_LEMBAGA }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID_LEMBAGA }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID_LEMBAGA })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

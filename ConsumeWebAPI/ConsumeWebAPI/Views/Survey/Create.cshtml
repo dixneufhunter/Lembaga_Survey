@@ -1,0 +1,102 @@
+﻿@model ConsumeWebAPI.Models.Lembaga_SurveyViewModel
+
+@{
+    ViewData["Title"] = "Create Lembaga Survey";
+    //var KabupatenList = ViewBag.KabupatenList;
+
+}
+
+<h1>Create</h1>
+
+@*<h4>Lembaga_SurveyViewModel</h4>*@
+<h4>@ViewData["Title"]</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                    <label asp-for="ID_LEMBAGA" class="control-label"></label>
+                    <input asp-for="ID_LEMBAGA" class="form-control" />
+                    <span asp-validation-for="ID_LEMBAGA" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <label asp-for="NAMA_LEMBAGA" class="control-label"></label>
+                <input asp-for="NAMA_LEMBAGA" class="form-control" />
+                <span asp-validation-for="NAMA_LEMBAGA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ALAMAT" class="control-label"></label>
+                <input asp-for="ALAMAT" class="form-control" />
+                <span asp-validation-for="ALAMAT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NO_TELEPON" class="control-label"></label>
+                <input asp-for="NO_TELEPON" class="form-control" />
+                <span asp-validation-for="NO_TELEPON" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EMAIL" class="control-label" ></label>
+                <input asp-for="EMAIL" class="form-control" autocomplete="off" />
+                <span asp-validation-for="EMAIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KETERANGAN" class="control-label"></label>
+                <input asp-for="KETERANGAN" class="form-control" />
+                <span asp-validation-for="KETERANGAN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="THN_PENELITIAN" class="control-label"></label>
+                <input asp-for="THN_PENELITIAN" class="form-control" />
+                <span asp-validation-for="THN_PENELITIAN" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="FLAG" class="control-label"></label>
+                    <input asp-for="FLAG" class="form-control" />
+                    <span asp-validation-for="FLAG" class="text-danger"></span>
+                </div>*@
+            @*<div class="form-group">
+                    @Html.RadioButtonFor(m => m.FLAG, "Y")
+                    <span>Admin</span>
+                    @Html.RadioButtonFor(m => m.FLAG, "N")
+                    <span>User</span>
+                </div>*@
+
+            <div class="form-group form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-radio-input" value="True" type="radio" asp-for="Status" id="status-1" checked /> Aktif
+                </label>
+            </div>
+            <div class="form-group form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" value="False" type="radio" asp-for="Status" id="status-2" /> Tidak Aktif
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="TGL_SURVEY" class="control-label"></label>
+                <input asp-for="TGL_SURVEY" class="form-control" />
+                <span asp-validation-for="TGL_SURVEY" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="KODE_KABUPATEN" class="control-label"></label>
+                <select asp-for="KODE_KABUPATEN"
+                        asp-items="@(new SelectList(ViewBag.KabupatenList, nameof(KabupatenViewModel.KODE_KABUPATEN), nameof(KabupatenViewModel.NAMA_KABUPATEN)))" class="form-control">
+                    <option>-- Pilih Kabupaten --</option>
+                </select>
+            </div>
+
+            <div class="form-group mt-2">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
