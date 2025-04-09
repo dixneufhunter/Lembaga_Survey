@@ -6,7 +6,9 @@ Teknologi: ASP.NET MVC, .NET Core 5.0, IIS Server</BR>
 Database: SQL Server 2019
 
 ## 1> REST API
-![image](https://github.com/user-attachments/assets/07cf1958-1334-4cd7-8f8a-81ac3ca31a38)
+![Capture_SurveyAPI](https://github.com/user-attachments/assets/2da21feb-b717-4fc9-8734-856d47ca02db)
+
+
 --
    
 ## 2> Architecture Microservices
