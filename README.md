@@ -1,5 +1,5 @@
 # Mini Project
-Project ini adalah sebuah mini project yang berfungsi untuk mengelola data survey di wilayah Jakarta.
+Project ini adalah sebuah mini project yang berfungsi untuk mengelola data survey di Kabupaten.
 
 # Spesifikasi</BR>
 Teknologi: ASP.NET MVC, .NET Core 5.0, IIS Server</BR>
